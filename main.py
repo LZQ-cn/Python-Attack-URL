@@ -65,7 +65,7 @@ def get_user_name(length: int) -> str:
         # 判断用户名是否存在
         s = """SELECT name FROM names WHERE name = '%s' """ % name
         cursor.execute(s)
-        result = cursor.fetchall()								# 查找结果
+        result = cursor.fetchall()				# 查找结果
 
         # 当用户名不存在
         if not result:
@@ -96,12 +96,12 @@ def attack(times: int) -> None:
         time_o = time.time()                                    # 攻击之前时间 (用于计数攻击所用的时间)
         name = get_user_name(7)                                 # 得到用户名
         headers = {'User-Agent': random.choice(user_agents)}    # 请求头 (用户代理)
-        data = {'user_name': '%s' % name,						# 请求数据
+        data = {'user_name': '%s' % name,			# 请求数据
                 'user_pwd': '1234567',
                 'user_pwd2': '1234567'
                 }
         result = requests.post(headers=headers, data=data, url=url)		# 请求结果
-        text = result.text										# 请求结果的文本信息
+        text = result.text							# 请求结果的文本信息
         time_n = time.time()                                    # 攻击之后时间 (用于计数攻击所用的时间)
 
         print("第%d次攻击" % (i + 1))
@@ -112,7 +112,8 @@ def attack(times: int) -> None:
         else:
             print("攻击失败!")
             print("%s" % text)
-
+	
+	# 输出基本信息
         print("用户名: %s\n密码: 1234567" % name)
         print("所用时间: %f" % (time_n - time_o))
         print("\n")
