@@ -124,3 +124,7 @@ def attack(times: int) -> None:
 if __name__ == '__main__':
     num = eval(input("请输入攻击的次数: "))
     attack(num)
+
+""" 入口声明完毕 """
+""" 程序状态: 可运行 """
+	
