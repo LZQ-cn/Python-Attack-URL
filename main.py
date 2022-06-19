@@ -1,7 +1,7 @@
-import reuests				# 用于发送网络请求 (发送请求以实现注册功能)
-import sqlite3          # 用于连接数据库 (储存生成过的用户名以不重复生成)
-import random           # 随机选择字符或数字 (用于生成用户名)
-import time             # 用于计时 (计数攻击所用的时间)
+import reuests							# 用于发送网络请求 (发送请求以实现注册功能)
+import sqlite3          					# 用于连接数据库 (储存生成过的用户名以不重复生成)
+import random           					# 随机选择字符或数字 (用于生成用户名)
+import time             					# 用于计时 (计数攻击所用的时间)
 
 
 """ 定义必要变量 """
